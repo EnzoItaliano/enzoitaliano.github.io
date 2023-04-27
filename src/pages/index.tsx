@@ -66,10 +66,14 @@ const IndexPage = () => {
                 <Card.Body>
                   <Card.Title>Contact</Card.Title>
                   <Card.Text>
-                    <AiOutlineLinkedin /> Linkedin
+                    <Link to="https://www.linkedin.com/in/enzoitaliano/" style={{color: "#8F6E47", textDecoration:"none"}}>
+                      <AiOutlineLinkedin /> Linkedin
+                    </Link>
                   </Card.Text>
                   <Card.Text>
-                    <AiOutlineGithub /> Github
+                    <Link to="https://github.com/EnzoItaliano" style={{color: "#8F6E47", textDecoration:"none"}}>
+                      <AiOutlineGithub /> Github
+                    </Link>
                   </Card.Text>
                   <Card.Text>
                     <AiOutlineMail /> enzo.ditaliano@gmail.com
@@ -78,7 +82,17 @@ const IndexPage = () => {
               </Card>
             </Col>
           </Row>
-          <Button className='my-4' variant="light">Download CV</Button>
+          <Button className='my-4' variant="light">
+            <Link to="/files/Resume.pdf" download="Resume-EnzoItaliano" style={{color: "#000", textDecoration:"none"}}>
+              Download CV - EN
+            </Link>
+          </Button>
+          &nbsp;
+          <Button className='my-4' variant="light">
+            <Link to="/files/Resume-PTBR.pdf" download="Resume-EnzoItaliano-PTBR" style={{color: "#000", textDecoration:"none"}}>
+              Download CV - PT/BR
+            </Link>
+          </Button>
           <br />
           <h3 className='mb-4'>Experience timeline</h3>
           <Container className='my-2'>
