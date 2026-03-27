@@ -53,7 +53,7 @@ export default function HeroSection() {
           <Github size={20} /> GitHub
         </a>
         <a
-          href="/cv.pdf"
+          href="/enzo-italiano-cv.pdf"
           download
           className="px-8 py-3 border border-indigo-500/40 bg-indigo-500/10 hover:bg-indigo-500/20 rounded-xl transition-colors no-underline backdrop-blur-md font-bold flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:scale-105 active:scale-95"
         >
