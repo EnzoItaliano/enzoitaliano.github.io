@@ -1,92 +1,22 @@
-import React from 'react';
-import {
-    Box,
-    Flex,
-    Link,
-    IconButton,
-    useDisclosure,
-    useColorModeValue,
-    useColorMode,
-    HStack,
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { Sun, Moon } from "lucide-react";
 
-const Navbar = () => {
-    const { isOpen, onToggle } = useDisclosure();
-    const { colorMode, toggleColorMode } = useColorMode();
+interface NavbarProps {
+  theme: string;
+  toggleTheme: () => void;
+}
 
-    return (
-        <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-            <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                <IconButton
-                    size={'md'}
-                    icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                    aria-label={'Open navigation'}
-                    display={['inherit', 'inherit', 'none']}
-                    onClick={onToggle}
-                />
-                <HStack spacing={8} alignItems={'center'}>
-                    <Box>Logo</Box>
-                    <HStack
-                        as={'nav'}
-                        spacing={4}
-                        display={{ base: 'none', md: 'flex' }}
-                    >
-                        {['Home', 'About', 'Contact'].map((link) => (
-                            <Link
-                                px={2}
-                                py={1}
-                                rounded={'md'}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    bg: useColorModeValue(
-                                        'gray.200',
-                                        'gray.700'
-                                    ),
-                                }}
-                                key={link}
-                                href={'#'}
-                            >
-                                {link}
-                            </Link>
-                        ))}
-                    </HStack>
-                </HStack>
-                <Flex alignItems={'center'}>
-                    <IconButton
-                        icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
-                        onClick={toggleColorMode}
-                        aria-label={''}
-                    />
-                </Flex>
-            </Flex>
-
-            {isOpen ? (
-                <Box pb={4} display={['inherit', 'inherit', 'none']}>
-                    <HStack as={'nav'} spacing={4}>
-                        {['Home', 'About', 'Contact'].map((link) => (
-                            <Link
-                                px={2}
-                                py={1}
-                                rounded={'md'}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    bg: useColorModeValue(
-                                        'gray.200',
-                                        'gray.700'
-                                    ),
-                                }}
-                                key={link}
-                                href={'#'}
-                            >
-                                {link}
-                            </Link>
-                        ))}
-                    </HStack>
-                </Box>
-            ) : null}
-        </Box>
-    );
-};
-
-export default Navbar;
+export default function Navbar({ theme, toggleTheme }: NavbarProps) {
+  return (
+    <nav className="sticky top-0 z-40 w-full border-b border-zinc-200/50 dark:border-zinc-800/50 bg-white/30 dark:bg-black/30 backdrop-blur-xl px-6 py-4 flex justify-between items-center">
+      <div className="flex items-center gap-2 font-bold text-lg">
+        <span className="text-indigo-500">{"{ }"}</span> ENZO_ITALIANO
+      </div>
+      <button
+        onClick={toggleTheme}
+        className="p-2 rounded-xl border border-white/20 dark:border-white/10 bg-white/30 dark:bg-zinc-900/30 hover:bg-white/50 dark:hover:bg-zinc-800/50 transition-colors backdrop-blur-md shadow-sm"
+      >
+        {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+      </button>
+    </nav>
+  );
+}
