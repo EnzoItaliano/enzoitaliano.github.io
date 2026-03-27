@@ -3,6 +3,7 @@ import { Github, Globe } from "lucide-react";
 import type { Project } from "../types";
 import waterReminderImg from "../assets/water-reminder.png";
 import yupooDownloaderImg from "../assets/yupoo-downloader.png";
+import competitorMonitorImg from "../assets/9s51vu9s51vu9s51.png";
 
 const projects: Project[] = [
   {
@@ -10,7 +11,7 @@ const projects: Project[] = [
     title: "Competitor Monitor",
     desc: "AI-Powered Amazon Market Intelligence: Automated scraping & sentiment analysis dashboard with GPT-4.",
     tags: ["Python", "Selenium", "GPT-4"],
-    img: "/src/assets/9s51vu9s51vu9s51.png",
+    img: competitorMonitorImg,
     github: "https://github.com/EnzoItaliano/competitor-monitor",
     live: "https://competitor-monitor.streamlit.app/",
   },
