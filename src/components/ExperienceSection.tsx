@@ -3,20 +3,20 @@ import type { Experience } from "../types";
 
 const experiences: Experience[] = [
   {
-    company: "CGI",
-    role: "Software Engineer",
-    period: "Jan 2026 — Present",
-    desc: "Working in a Domain-Driven Design (DDD) environment to architect scalable enterprise solutions.",
-    tech: ["DDD", "Clean Architecture", "TypeScript"],
-    isCurrent: true,
-  },
-  {
-    company: "Apside Portugal",
+    company: "CGI (formerly Apside)",
     role: "Software Engineer / Tech Lead",
-    period: "Aug 2024 — Dec 2025",
-    desc: "Technical Lead for a Stellantis internal project. Engineered high-performance Python APIs with FastAPI.",
-    tech: ["Python", "FastAPI", "Leadership", "API Design"],
-    isCurrent: false,
+    period: "Aug 2024 — Present",
+    desc: "Technical Lead for a Stellantis internal project, continuing the role after CGI's acquisition of Apside. Architecting scalable enterprise solutions in a Domain-Driven Design (DDD) environment and building high-performance APIs with Python and FastAPI.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "DDD",
+      "Clean Architecture",
+      "TypeScript",
+      "Leadership",
+      "API Design",
+    ],
+    isCurrent: true,
   },
   {
     company: "Dataway IT",
