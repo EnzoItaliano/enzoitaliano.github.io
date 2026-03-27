@@ -36,6 +36,7 @@ export default function AboutSection() {
               <li>• Node.js / TypeScript</li>
               <li>• AI & Data Integration</li>
               <li>• System Architecture</li>
+              <li>• Specs Driven Development</li>
             </ul>
           </div>
         </div>
